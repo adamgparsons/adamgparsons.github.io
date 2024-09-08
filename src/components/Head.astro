@@ -1,0 +1,16 @@
+---
+const { title = 'Adam Parsons' } = Astro.props;
+import { getImage } from 'astro:assets';
+import faviconPng from '../../public/favicon-32x32.png';
+
+const faviconPngOptimized = await getImage({ src: faviconPng, width: 32, height: 32, format: 'png' });
+---
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" href={faviconPngOptimized.src} type="image/png" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+</head>

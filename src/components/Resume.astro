@@ -1,0 +1,196 @@
+
+
+<section class="resume">
+  <h2 class="resume-heading">Résumé</h3>
+  <div class="resume-content">
+    <div class="experience">
+      <h3>Work experience</h3>
+      <ul>
+         <li>
+          <h4>Senior Web Developer</h4>
+          <p>Nala</p>
+          <p class="date">January 2023 - Present</p>
+        </li>
+        <li>
+          <h4>Frontend Developer</h4>
+          <p>Wayhome</p>
+          <p class="date">August 2021 - January 2023</p>
+        </li>
+          <li>
+          <h4>Developer</h4>
+          <p>Snook</p>
+          <p class="date">August 2019 - August 2021</p>
+        </li>
+        <li>
+          <h4>UX Designer</h4>
+          <p>Citizens Advice</p>
+          <p class="date">November 2017 - July 2019</p>
+        </li>
+          <li>
+          <h4>UX Designer</h4>
+          <p>British Red Cross</p>
+          <p class="date">September 2016 - November 2017</p>
+        </li>
+         <li>
+          <h4>UX Designer</h4>
+          <p>Freelance</p>
+          <p class="date">December 2015 - June 2016</p>
+        </li>
+      
+      </ul>
+    </div>
+    <div class="skills">
+      <h3>Skills</h3>
+      <div class="skills-container">
+        <ul class="skills-list">
+          <li><p>HTML5/CSS</p></li>
+          <li><p>SASS/Less</p></li>
+          <li><p>Javascript/React</p></li>
+          <li><p>Typescript</p></li>
+          <li><p>Node.js</p></li>
+          <li><p>Git</p></li>
+          <li><p>Figma</p></li>
+          <li><p>Sketch</p></li>
+          <li><p>Adobe Creative Suite</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="edu-courses">
+      <h3>Education</h3>
+      <ul>
+        <li>
+          <h4>User Experience Design</h4>
+          <p>General Assembly</p>
+          <p class="date">2015</p>
+        </li>
+        <li>
+          <h4>Multimedia Diploma</h4>
+          <p>SAE Institute Sydney</p>
+          <p class="date">2006 - 2008</p>
+        </li>
+      </ul>
+      <h3>Online Courses</h3>
+      <ul>
+        <li>
+          <h4>Full Stack Open 2020</h4>
+          <p>University of Helsinki</p>
+        </li>
+        <li>
+          <h4>React for Beginners</h4>
+          <p>Wes Bos</p>
+        </li>
+        <li>
+          <h4>ES6 for Everyone</h4>
+          <p>Wes Bos</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .resume {
+    margin-top: var(--space-6);
+  }
+  .resume-heading {
+    margin-bottom: 70px;
+    position: relative;
+    display: inline-block;
+  }
+  .resume-heading::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 0;
+    background-image: url('/images/squiggle-2.svg');
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    right: -10px;
+    top: 40px;
+    transform: rotate(9deg);
+    display: none;
+  }
+  .resume-content {
+    display: grid;
+    grid-template: "experience" "skills" "education";
+    grid-auto-columns: 1fr;
+    grid-column-gap: 0px;
+  }
+  .experience {
+    grid-area: experience;
+  }
+  .skills {
+    grid-area: skills;
+    align-self: end;
+    margin-top:var(--space-32);
+  }
+  .skills-container {
+    display: grid;
+    grid-template: "design" "development";
+  }
+  ul {
+    padding-left: 0;
+  }
+  .skills-list {
+    list-style-type: none;
+    margin-left: 0px;
+    margin-bottom: var(--space-6);
+    column-count: 2;
+    li {
+        margin-bottom: var(--space-8);
+    }
+  }
+  .edu-courses {
+    grid-area: education;
+  }
+  h3 {
+    font-size: 30px;
+    color: var(--color-grey-800);
+    margin-bottom: 44px;
+  }
+  h4 {
+    font-size: var(--heading3-font-size);
+    color: var(--color-grey-800);
+    margin-bottom: var(--space-0);
+    font-weight: 800;
+  }
+  ul {
+    list-style-type: none;
+    margin-left: 0px;
+    margin-bottom: var(--space-6);
+  }
+  li {
+    margin-bottom: var(--space-6);
+  }
+  p {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .date {
+    font-size: 18px;
+    color: var(--color-grey-600);
+  }
+
+  @media (min-width: 850px) {
+    .resume-content {
+      grid-template: "experience education" "skills education";
+      grid-column-gap: var(--space-4);
+    }
+    .experience {
+      margin-bottom: var(--space-6);
+    }
+    .resume-heading::after {
+      right: -80px;
+      top: 11px;
+      display: inline;
+    }
+    .skills-container ul {
+      margin-bottom: 0;
+    }
+    .skills-container ul li:last-child {
+      margin-bottom: 0px;
+    }
+  }
+</style>

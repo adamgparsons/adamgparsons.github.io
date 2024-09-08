@@ -1,0 +1,96 @@
+---
+import '../styles.css/index.css';
+---
+
+<div class="hero">
+    <h2 class="hi">
+        <span role="img" aria-label="waving hand">👋</span> Hi I'm <span class="name">Adam</span>
+    </h2>
+    <p class="description">
+        I'm a Senior Frontend Developer based in London.
+        <span class="second-sentence">
+            I enjoy designing and building interfaces that solve user problems.
+        </span>
+        <br><br>
+        Currently at <a href="https://www.nala.com/" class="work-link">Nala</a>
+    </p>
+</div>
+
+<style>
+    .hero {
+        margin-top: var(--space-32);
+        margin-bottom: 80px;
+        animation: 0.5s ease 0s normal forwards 1 fadein;
+        max-width: 850px;
+    }
+    @keyframes fadein {
+        0% { opacity: 0; }
+        66% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    .hi {
+        font-size: var(--font-size-36);
+        margin-bottom: var(--space-24);
+    }
+    .name {
+        position: relative;
+    }
+    .name::after {
+        content: "";
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        z-index: 0;
+        background-image: url('/images/underline.svg');
+        background-repeat: no-repeat;
+        background-size: 130px 130px;
+        left: 0px;
+        top: -15px;
+    }
+    .description {
+        font-size: var(--font-size-24);
+        font-weight: 400;
+        color: var(--color-grey-800);
+    }
+    .second-sentence {
+        display: inline;
+      
+    }
+    .work-link {
+        color: var(--color-grey-700);
+        text-decoration: none;
+        padding-bottom: 0px;
+        box-shadow: inset 0 -0.175em white, inset 0 -0.22em var(--color-grey-700);
+        transition: color 0.2s ease-in, box-shadow 0.2s ease-in;
+    }
+    .work-link:hover {
+        color: #4e97d0;
+        box-shadow: inset 0 -0.175em white, inset 0 -0.22em #4e97d0;
+        cursor: pointer;
+    }
+    @media (min-width: 550px) {
+        .hero {
+            margin-top: var(--space-64);
+            margin-bottom: var(--space-128);
+        }
+        .hi {
+            font-size: var(--font-size-42);
+            margin-bottom: var(--space-24);
+        }
+        .description {
+            font-size: var(--font-size-36);
+            line-height: var(--heading2-line-height);
+            color: var(--color-grey-800);
+            
+        }
+        .name::after {
+            width: 130px;
+            height: 130px;
+            left: 0px;
+            top: -14px;
+        }
+        .second-sentence {
+            display: block;
+        }
+    }
+</style>

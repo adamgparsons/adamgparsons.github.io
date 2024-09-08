@@ -1,0 +1,44 @@
+---
+import GithubLink from './GithubLink.astro';
+---
+
+<header>
+  <div class="container">
+    <h1><a href="/">Adam Parsons</a></h1>
+    <nav>
+      <GithubLink />
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    padding: 2rem 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #007bff;
+  }
+  h1 a {
+    color: inherit;
+  }
+  h1 a:hover {
+    color: #007bff;
+  }
+</style>

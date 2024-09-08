@@ -1,0 +1,79 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ArticleCard from "./ArticleCard.astro";
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { posts } = Astro.props;
+---
+
+<section class="article-list">
+  <h2 class="list-heading">Some stuff I've made</h2>
+  <div class="article-grid">
+    {posts.sort((a, b) => a.frontmatter.order - b.frontmatter.order).map((post) => (
+      <ArticleCard post={post} />
+    ))}
+  </div>
+</section>
+
+<style>
+  .article-list {
+    margin-bottom: 120px;
+    animation: 1s ease 0s normal forwards 1 fadein;
+  }
+
+  @keyframes fadein {
+    0% { opacity: 0; }
+    66% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .list-heading {
+    font-size: var(--font-size-36);
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .list-heading::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    z-index: 0;
+    background-image: url('/images/squiggle.svg');
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
+    right: -10px;
+    top: 40px;
+    transform: rotate(9deg);
+    display: none;
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr 24px 1fr 24px 1fr;
+    grid-row-gap: 48px;
+  }
+
+  @media (min-width: 768px) {
+    .list-heading::after {
+      right: -80px;
+      top: 11px;
+      display: inline;
+    }
+
+    .article-grid {
+      grid-row-gap: 24px;
+    }
+  }
+
+  @media (min-width: 980px) {
+    .article-grid {
+      grid-template-columns: 1fr 36px 1fr 36px 1fr;
+      grid-row-gap: 36px;
+    }
+  }
+</style>

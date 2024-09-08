@@ -1,0 +1,95 @@
+:root {
+  /* Colors */
+  --color-grey-100: #f7fafc;
+  --color-grey-200: #edf2f7;
+  --color-grey-300: #e2e8f0;
+  --color-grey-400: #cbd5e0;
+  --color-grey-500: #a0aec0;
+  --color-grey-600: #718096;
+  --color-grey-700: #4a5568;
+  --color-grey-800: #2d3748;
+  --color-grey-900: #1a202c;
+  --color-white-0125: rgba(255, 255, 255, 0.0125);
+  --color-brand-blue: #4e97d0;
+  --color-validation-red: #e53e3e;
+
+  /* Typography */
+  --typeface: sans-serif;
+
+  /* Font Sizes */
+  --font-size-12: 12px;
+  --font-size-16: 16px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-36: 36px;
+  --font-size-42: 42px;
+  --font-size-48: 48px;
+  --font-size-80: 80px;
+  --font-size-96: 96px;
+  --font-size-128: 128px;
+
+  /* Line Heights */
+  --line-height-1: 1;
+  --line-height-1-25: 1.25;
+  --line-height-1-5: 1.5;
+
+  /* Text Styles */
+  --heading1-font-size: 42px;
+  --heading1-line-height: 56px;
+  --heading1-font-weight: 800;
+  --heading1-color: #2d3748;
+
+  --heading2-font-size: 36px;
+  --heading2-line-height: 48px;
+  --heading2-font-weight: 800;
+  --heading2-color: #2d3748;
+
+  --heading3-font-size: 24px;
+  --heading3-line-height: 28px;
+  --heading3-font-weight: 800;
+  --heading3-color: #4a5568;
+
+  --body-font-size: 16px;
+  --body-line-height: 30px;
+  --body-font-weight: 400;
+  --body-color: #4a5568;
+
+  /* Spacing */
+  --space-0: 0px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-64: 64px;
+  --space-128: 128px;
+  --space-256: 256px;
+  --space-512: 512px;
+
+  /* Border Widths */
+  --border-width-0: 0;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-4: 4px;
+  --border-width-8: 8px;
+  --border-width-16: 16px;
+  --border-width-32: 32px;
+
+  /* Border Radii */
+  --radius-0: 0;
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-16: 16px;
+  --radius-full: 9999px;
+  --radius-100: 100%;
+
+  /* Measures */
+  --measure-20: 20em;
+  --measure-30: 30em;
+  --measure-34: 34em;
+
+  /* Breakpoints */
+  --breakpoint-small: 500px;
+  --breakpoint-medium: 850px;
+  --breakpoint-large: 1170px;
+}

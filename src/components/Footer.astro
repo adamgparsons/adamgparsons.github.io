@@ -1,0 +1,27 @@
+---
+import GithubLink from './GithubLink.astro';
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container">
+    <p>&copy; {currentYear} Designed and coded by yours truly</p>
+    <GithubLink />
+  </div>
+</footer>
+
+<style>
+  footer {
+    margin-top: var(--space-128);
+    padding-bottom: var(--space-32);
+  }
+  .container {
+    max-width: var(--breakpoint-large);
+    margin: 0 auto;
+  }
+  p {
+    color: var(--color-grey-900);
+    font-size: var(--font-size-16);
+    margin-bottom: 0;
+  }
+</style>
